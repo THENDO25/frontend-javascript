@@ -65,6 +65,8 @@ interface DirectorInterface {
       return 'Teaching Math';
     } else if (todayClass === 'History') {
       return 'Teaching History';
+    } else {
+      return 'Invalid subject';
     }
   }
   
