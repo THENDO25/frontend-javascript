@@ -11,6 +11,22 @@ interface Teacher {
     numberOfReports: number;
   }
   
+  interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+  }
+  
+  const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    return `${firstName[0]}. ${lastName}`;
+  };
+  
+  const teacher3: Teacher = {
+    firstName: 'John',
+    fullTimeEmployee: false,
+    lastName: 'Doe',
+    location: 'London',
+    contract: false,
+  };
+  
   const director1: Directors = {
     firstName: 'John',
     lastName: 'Doe',
@@ -19,4 +35,6 @@ interface Teacher {
     numberOfReports: 17,
   };
   
+  console.log(teacher3);
   console.log(director1);
+  console.log(printTeacher(director1.firstName, director1.lastName)); // J. Doe
